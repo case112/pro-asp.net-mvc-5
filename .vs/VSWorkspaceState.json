@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\EssentialTools",
+    "\\EssentialTools\\EssentialTools",
+    "\\EssentialTools\\EssentialTools\\Models",
+    "\\LanguageFeatures\\LanguageFeatures",
+    "\\LanguageFeatures\\LanguageFeatures\\Models",
+    "\\Razor\\Razor",
+    "\\Razor\\Razor\\Models"
+  ],
+  "SelectedNode": "\\EssentialTools\\EssentialTools\\Models",
+  "PreviewInSolutionExplorer": false
+}
