@@ -7,8 +7,13 @@ namespace EssentialTools.Tests
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void Discount_Above_100()
         {
+            // arrange
+
+            // act
+
+            // assert
         }
     }
 }
