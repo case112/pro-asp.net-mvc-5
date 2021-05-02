@@ -9,7 +9,19 @@ namespace EssentialTools.Models
     {
         public decimal ApplyDiscount(decimal totalparam)
         {
-            throw new NotImplementedException();
+            if (totalparam < 0)
+            {
+                throw new ArgumentOutOfRangeException();
+            } else if (totalparam > 100)
+            {
+                return totalparam * 0.9M;
+            } else if (totalparam >= 10 && totalparam <= 100)
+            {
+                return totalparam - 5;
+            } else
+            {
+                return totalparam;
+            }
         }
     }
 }
