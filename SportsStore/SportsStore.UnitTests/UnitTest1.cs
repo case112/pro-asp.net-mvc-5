@@ -122,5 +122,50 @@ namespace SportsStore.UnitTests
                 @"<a class=""btn btn-default"" href=""Page3"">3</a>",
                 result.ToString());
         }
+
+        [TestMethod]
+        public void Can_Create_Categories()
+        {
+            // arrange
+            Mock<IProductRepository> mock = new Mock<IProductRepository>();
+            mock.Setup(m => m.Products).Returns(new Product[] {
+                new Product {ProductID = 1, Name = "P1", Category = "Apples"},
+                new Product {ProductID = 2, Name = "P2", Category = "Apples"},
+                new Product {ProductID = 3, Name = "P3", Category = "Plums"},
+                new Product {ProductID = 4, Name = "P4", Category = "Oranges"},
+            });
+
+            NavController target = new NavController(mock.Object);
+
+            // act
+            string[] results = ((IEnumerable<string>)target.Menu().Model).ToArray();
+
+            // assert
+            Assert.AreEqual(results.Length, 3);
+            Assert.AreEqual(results[0], "Apples");
+            Assert.AreEqual(results[1], "Oranges");
+            Assert.AreEqual(results[2], "Plums");
+
+        }
+
+        [TestMethod]
+        public void Indicates_Selected_Category()
+        {
+            // arrange
+            Mock<IProductRepository> mock = new Mock<IProductRepository>();
+            mock.Setup(m => m.Products).Returns(new Product[] {
+                new Product {ProductID = 1, Name = "P1", Category = "Apples"},
+                new Product {ProductID = 2, Name = "P2", Category = "Oranges"},
+            });
+
+            NavController target = new NavController(mock.Object);
+            string categoryToSelect = "Apples";
+
+            // act
+            string result = target.Menu(categoryToSelect).ViewBag.SelectedCategory;
+
+            // assert
+            Assert.AreEqual(categoryToSelect, result);
+        }
     }
 }
