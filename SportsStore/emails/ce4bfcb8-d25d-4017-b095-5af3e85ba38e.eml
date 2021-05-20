@@ -1,0 +1,15 @@
+X-Sender: sportsstore@example.com
+X-Receiver: orders@example.com
+MIME-Version: 1.0
+From: sportsstore@example.com
+To: orders@example.com
+Date: 20 May 2021 12:40:58 +0300
+Subject: New order submitted!
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: quoted-printable
+
+A new order has been submitted=0D=0A---=0D=0AItems:=0D=0A2 x Unst=
+eady Chair (subtotal: 59,90 ?1 x Thinking Cap (subtotal: 16,00 ?1=
+ x Human Chess Board (subtotal: 75,00 ?Total order value: 150,90 =
+?---=0D=0AShip to:=0D=0AOskar=0D=0ASyyri 4-7=0D=0A=0D=0A=0D=0ATor=
+i=0D=0ANZ=0D=0AUnited Vor=0D=0A6003=0D=0A---=0D=0AGift wrap: Yes
