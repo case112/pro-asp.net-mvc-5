@@ -10,21 +10,14 @@ namespace WebApplication1.Controllers
     {
         public ActionResult Index()
         {
-            return View();
-        }
+            int firstVal = 10;
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
+            int secondVal = 5;
+            int result = firstVal / secondVal;
 
-            return View();
-        }
+            ViewBag.Message = "Welcome to asp.net mvc!";
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            return View(result);
         }
     }
 }
