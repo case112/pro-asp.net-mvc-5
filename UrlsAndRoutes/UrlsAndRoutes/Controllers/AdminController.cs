@@ -11,7 +11,7 @@ namespace UrlsAndRoutes.Controllers
         // GET: Admin
         public ActionResult Index()
         {
-            ViewBag.Controller = "Index";
+            ViewBag.Controller = "Admin";
             ViewBag.Action = "Index";
             return View("ActionName");
         }
