@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Mvc.Routing.Constraints;
+using UrlsAndRoutes.Infrastructure;
 
 namespace UrlsAndRoutes
 {
@@ -12,6 +13,11 @@ namespace UrlsAndRoutes
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
+            routes.MapRoute("ChromeRoute", "{*catchall}",
+                new { controller = "Home", action = "Index" },
+                new { customConstraint = new UserAgentConstraint("Chrome") },
+                new[] { "UrlsAndRoutes.AdditionalControllers" });
+
             routes.MapRoute("MyRoute", "{controller}/{action}/{id}/{*catchall}",
                 new { controller = "Home", action = "Index", id = UrlParameter.Optional },
                 new
