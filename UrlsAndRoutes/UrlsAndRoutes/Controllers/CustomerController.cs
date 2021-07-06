@@ -8,7 +8,7 @@ namespace UrlsAndRoutes.Controllers
 {
     public class CustomerController : Controller
     {
-        // GET: Customer
+        [Route("Test")]
         public ActionResult Index()
         {
             ViewBag.Controller = "Customer";
